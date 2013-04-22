@@ -9,7 +9,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test do
+group :test, :development do
   gem 'rspec-rails', '~> 2.13'
   gem 'capybara', '~> 2.1'
   gem 'poltergeist', '~> 1.2'
