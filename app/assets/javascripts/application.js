@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require typeahead
 //= require_tree .

@@ -1,0 +1,17 @@
+<form>
+  <label>Type a country name:</label>
+  <input type="text" id="country">
+</form>
+
+<script type="text/javascript">
+$(function() {
+  $("#country").typeahead({
+    name: 'countries',
+    prefetch: '/countries.json',
+    limit: 15
+ });
+ $(document).on("typeahead:selected", function(event, datum) {
+   window.location = datum.url;
+ });
+});
+</script>

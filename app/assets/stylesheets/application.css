@@ -11,3 +11,47 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: 'Helvetica Nueue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+div.content {
+  width: 1024px;
+  margin: auto;
+}
+
+form {
+  margin-top: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input#country, input.tt-hint {
+  font-size: 36px;
+  width: 650px;
+}
+
+span.tt-dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 656px;
+  font-size: 28px;
+}
+
+div.tt-suggestion p {
+  margin: 0;
+  padding-left: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+div.tt-is-under-cursor {
+  background-color: #ccc;
+}
