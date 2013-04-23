@@ -26,8 +26,9 @@ div.content {
   margin: auto;
 }
 
-form {
-  margin-top: 200px;
+div.inner-content {
+  margin-top: 100px;
+  margin-left: 15px;
 }
 
 a {
