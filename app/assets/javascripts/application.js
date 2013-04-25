@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require typeahead
 //= require_tree .
+
+// function for testing with JavaScript unit tests (see spec/javascripts/)
+function factorial(n) {
+  if (n <= 1) {
+    return 1;
+  } else {
+    return n * factorial(n-1);
+  }
+}
+
+// From JavaScript: The Good Parts
+var memoizer = function(memo, formula) {
+  var recur = function(n) {
+    var result = memo[n];
+    if (typeof result !== 'number') {
+      result = formula(recur, n);
+      memo[n] = result;
+    }
+    return result;
+  };
+  return recur;
+};
+
+var memoizedFactorial = memoizer([1, 1], function(recur, n) {
+  return n * recur(n-1);
+});
