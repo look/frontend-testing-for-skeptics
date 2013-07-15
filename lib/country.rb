@@ -6,7 +6,11 @@ class Country
   # Convert raw list of countries to Twitter Typeahead Datum objects
   def self.typeahead_data
     @typeahead_data ||= COUNTRY_LIST.map do |code, name|
-      {:value => name, :tokens => name.split(" "), :url => Rails.application.routes.url_helpers.country_path(code)}
+      {
+        :value => name,
+        :tokens => name.split(" "),
+        :url => Rails.application.routes.url_helpers.country_path(code)
+      }
     end
   end
 
