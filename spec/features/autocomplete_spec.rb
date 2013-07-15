@@ -5,8 +5,6 @@ describe 'country autocomplete', :js => true do
     it 'shows autocompletions and redirects to the selected country' do
       visit root_path
       fill_in "country", :with => 'norw'
-      # HACK: click away to trigger the display of results
-      find("body").click 
 
       find('.tt-suggestion').click
 
